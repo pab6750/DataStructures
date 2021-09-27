@@ -7,7 +7,7 @@ public class Queue {
 	}
 	
 	public void enqueue(int item) {
-		this.content.addAfter(item, 0);
+		this.content.addBeforeHead(item);;
 	}
 	
 	public int dequeue() {
@@ -22,5 +22,9 @@ public class Queue {
 	
 	public int length() {
 		return this.content.getLength();
+	}
+	
+	public int front() {
+		return this.content.getLast().getItem();
 	}
 }
